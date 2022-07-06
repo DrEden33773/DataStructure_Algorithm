@@ -1,0 +1,1 @@
+/usr/sbin/clang++ -g CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o -o DataStructure_Algorithm 
