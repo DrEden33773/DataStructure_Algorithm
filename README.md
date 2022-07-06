@@ -2,6 +2,4 @@
 
 ## A repository for DataStructure_Algorithm Learning
 
-## -------------------------------------------------------
-
 ## Type => Learning & Practicing
