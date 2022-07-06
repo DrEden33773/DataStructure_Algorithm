@@ -19,8 +19,8 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/cwchar \
   /usr/include/wchar.h /usr/include/bits/libc-header-start.h \
   /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
-  /usr/lib/clang/13.0.1/include/stddef.h \
-  /usr/lib/clang/13.0.1/include/stdarg.h /usr/include/bits/wchar.h \
+  /usr/lib/clang/14.0.6/include/stddef.h \
+  /usr/lib/clang/14.0.6/include/stdarg.h /usr/include/bits/wchar.h \
   /usr/include/bits/types/wint_t.h /usr/include/bits/types/mbstate_t.h \
   /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
   /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
@@ -30,7 +30,7 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/bits/exception_ptr.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/bits/exception_defines.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/bits/cxxabi_init_exception.h \
-  /usr/lib/clang/13.0.1/include/__stddef_max_align_t.h \
+  /usr/lib/clang/14.0.6/include/__stddef_max_align_t.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/typeinfo \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/bits/hash_bytes.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/new \
@@ -49,7 +49,7 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/bits/concept_check.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/debug/assertions.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/cstdint \
-  /usr/lib/clang/13.0.1/include/stdint.h /usr/include/stdint.h \
+  /usr/lib/clang/14.0.6/include/stdint.h /usr/include/stdint.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/bits/time64.h /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-uintn.h \

@@ -17,7 +17,7 @@ class Max_Sum_of_Sub {
 private:
   inline static int solution(const vector<int> &nums);
   inline static int max_of(const int &a, const int &b);
-  inline static int better_solution(const vector<int> &nums);
+  // inline static int better_solution(const vector<int> &nums);
 
 public:
   inline static void interface();
@@ -44,6 +44,12 @@ void Max_Sum_of_Sub::interface() {
   // cout << "b.Result: " << RES << endl;
 }
 
+/**
+ * @brief Dynamic_Programming
+ *
+ * @param nums
+ * @return int
+ */
 int Max_Sum_of_Sub::solution(const vector<int> &nums) {
   if (nums.size() == 1) {
     return nums[0];
