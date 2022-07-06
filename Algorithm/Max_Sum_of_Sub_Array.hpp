@@ -80,30 +80,3 @@ int Max_Sum_of_Sub::solution(const vector<int> &nums) {
   }
   return res;
 }
-
-int Max_Sum_of_Sub::better_solution(const vector<int> &nums) {
-  if (nums.size() == 1) {
-    return nums[0];
-  }
-  int LeftPOS  = 0;
-  int RightPOS = 1;
-  int result   = nums[0];
-  int temp     = nums[0];  //=> Σ[LeftPOS, RightPOS)
-  for (int i = 1; i < nums.size(); ++i) {
-    RightPOS    = i;
-    int current = nums[i];
-    if (current >= current + temp) {  // => update LeftPOS
-      LeftPOS = i;
-      temp    = current;
-      result  = current;
-    } else {  // => do not update LeftPOS
-      temp += current;
-      if (current >= 0) {
-        result = temp;
-      } else {
-        //
-      }
-    }
-  }
-  return result;
-}
