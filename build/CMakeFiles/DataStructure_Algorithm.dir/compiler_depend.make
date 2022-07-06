@@ -27,8 +27,8 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/floatn.h \
   /usr/include/bits/floatn-common.h \
-  /usr/lib/clang/13.0.1/include/stddef.h \
-  /usr/lib/clang/13.0.1/include/stdarg.h \
+  /usr/lib/clang/14.0.6/include/stddef.h \
+  /usr/lib/clang/14.0.6/include/stdarg.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/types/mbstate_t.h \
@@ -42,7 +42,7 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/12.1.0/bits/exception_ptr.h \
   /usr/include/c++/12.1.0/bits/exception_defines.h \
   /usr/include/c++/12.1.0/bits/cxxabi_init_exception.h \
-  /usr/lib/clang/13.0.1/include/__stddef_max_align_t.h \
+  /usr/lib/clang/14.0.6/include/__stddef_max_align_t.h \
   /usr/include/c++/12.1.0/typeinfo \
   /usr/include/c++/12.1.0/bits/hash_bytes.h \
   /usr/include/c++/12.1.0/new \
@@ -61,7 +61,7 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/12.1.0/bits/concept_check.h \
   /usr/include/c++/12.1.0/debug/assertions.h \
   /usr/include/c++/12.1.0/cstdint \
-  /usr/lib/clang/13.0.1/include/stdint.h \
+  /usr/lib/clang/14.0.6/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
@@ -295,8 +295,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/12.1.0/bits/stl_iterator.h:
 
-/usr/include/c++/12.1.0/compare:
-
 /usr/include/c++/12.1.0/type_traits:
 
 /usr/include/c++/12.1.0/bits/charconv.h:
@@ -307,9 +305,23 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/12.1.0/bits/hash_bytes.h:
 
-/usr/lib/clang/13.0.1/include/__stddef_max_align_t.h:
+/usr/include/c++/12.1.0/bits/basic_ios.h:
 
-/usr/include/bits/types/locale_t.h:
+/usr/include/c++/12.1.0/debug/debug.h:
+
+/usr/include/c++/12.1.0/bits/ostream.tcc:
+
+/usr/include/c++/12.1.0/bits/move.h:
+
+/usr/include/c++/12.1.0/bits/locale_classes.h:
+
+/usr/include/c++/12.1.0/typeinfo:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/c++/12.1.0/bits/char_traits.h:
+
+/usr/include/bits/types/struct_tm.h:
 
 /usr/include/c++/12.1.0/bits/iterator_concepts.h:
 
@@ -361,12 +373,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/bits/wordsize.h:
 
-/usr/include/c++/12.1.0/bits/range_access.h:
-
-/usr/include/c++/12.1.0/bits/invoke.h:
-
-/usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/c++config.h:
-
 /usr/include/c++/12.1.0/vector:
 
 /usr/include/c++/12.1.0/bits/ranges_cmp.h:
@@ -387,19 +393,17 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/gthr.h:
 
-/usr/include/c++/12.1.0/bits/ostream.tcc:
-
-/usr/include/c++/12.1.0/bits/move.h:
-
-/usr/include/c++/12.1.0/bits/locale_classes.h:
+/usr/include/bits/types/locale_t.h:
 
 /usr/include/bits/long-double.h:
+
+/usr/lib/clang/14.0.6/include/stddef.h:
+
+/usr/lib/clang/14.0.6/include/__stddef_max_align_t.h:
 
 /usr/include/sched.h:
 
 /usr/include/c++/12.1.0/iostream:
-
-/usr/lib/clang/13.0.1/include/stdarg.h:
 
 ../main.cpp:
 
@@ -410,20 +414,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/12.1.0/bits/exception_ptr.h:
 
 /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
-
-/usr/include/c++/12.1.0/bits/basic_ios.h:
-
-/usr/include/c++/12.1.0/debug/debug.h:
-
-/usr/include/c++/12.1.0/typeinfo:
-
-/usr/include/bits/wchar.h:
-
-/usr/include/c++/12.1.0/bits/char_traits.h:
-
-/usr/include/bits/types/struct_tm.h:
-
-/usr/lib/clang/13.0.1/include/stddef.h:
 
 /usr/include/c++/12.1.0/bits/nested_exception.h:
 
@@ -457,13 +447,29 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/12.1.0/bits/concept_check.h:
 
+/usr/include/c++/12.1.0/bits/range_access.h:
+
+/usr/include/c++/12.1.0/bits/invoke.h:
+
+/usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/c++config.h:
+
+/usr/lib/clang/14.0.6/include/stdarg.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/ctype.h:
+
 /usr/include/c++/12.1.0/cstdint:
 
 /usr/include/c++/12.1.0/bits/refwrap.h:
 
 /usr/include/bits/types/struct_timespec.h:
 
-/usr/lib/clang/13.0.1/include/stdint.h:
+/usr/include/c++/12.1.0/compare:
+
+/usr/lib/clang/14.0.6/include/stdint.h:
+
+/usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/types.h:
 
@@ -490,10 +496,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/12.1.0/clocale:
 
 /usr/include/bits/locale.h:
-
-/usr/include/bits/waitflags.h:
-
-/usr/include/ctype.h:
 
 /usr/include/features.h:
 
@@ -546,8 +548,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: ../main.cpp \
 /usr/include/bits/struct_rwlock.h:
 
 /usr/include/bits/types/struct_itimerspec.h:
-
-/usr/include/bits/pthreadtypes.h:
 
 /usr/include/c++/12.1.0/bits/basic_string.h:
 
