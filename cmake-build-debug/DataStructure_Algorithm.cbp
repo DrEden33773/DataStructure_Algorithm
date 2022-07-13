@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Jump_N_Step.hpp">
+			<Option target="DataStructure_Algorithm"/>
+		</Unit>
+		<Unit filename="/home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Max_Sum_of_Sub_Array.hpp">
+			<Option target="DataStructure_Algorithm"/>
+		</Unit>
 		<Unit filename="/home/eden/CppProjects/DataStructure_Algorithm/main.cpp">
 			<Option target="DataStructure_Algorithm"/>
 		</Unit>
