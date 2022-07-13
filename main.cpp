@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "Algorithm/Jump_N_Step.hpp"
 #include "Algorithm/Max_Sum_of_Sub_Array.hpp"
 
