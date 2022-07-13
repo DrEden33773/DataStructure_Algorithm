@@ -19,7 +19,7 @@ public:
 
 private:
   [[maybe_unused]] inline static int solution(const int &input);
-  [[maybe_unused]] inline static int better_solution(const int &input);
+  inline static int better_solution(const int &input);
   inline static int best_solution(const int &input);
 };
 
