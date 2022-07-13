@@ -1,1 +1,0 @@
-/usr/sbin/c++ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o -o DataStructure_Algorithm 
