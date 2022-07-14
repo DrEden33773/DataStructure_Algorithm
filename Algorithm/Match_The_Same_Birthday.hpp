@@ -51,7 +51,7 @@ auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
         vector<pair<string, birthday>> temp_container;
         // The reason to use vector<pair<>> instead of map<> =>
         // map<> has a double direction iterator,
-        // which is not supported by gcc_sort method.
+        // which is not supported by gcc_sort method (it only supports one direction iterator).
         vector<string> _names = _pair.second;
         int _month            = _pair.first;
         for (const auto& _name : _names) {
