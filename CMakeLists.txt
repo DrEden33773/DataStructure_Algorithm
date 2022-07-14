@@ -8,4 +8,5 @@ add_executable(
         main.cpp
         Algorithm/Jump_N_Step.hpp
         Algorithm/Max_Sum_of_Sub_Array.hpp
+        Algorithm/Match_The_Same_Birthday.hpp
 )
