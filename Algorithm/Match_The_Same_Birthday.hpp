@@ -36,6 +36,8 @@ private:
 
 auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
     type_res res;
+    if (input.empty() || input.size() == 1) // if input is empty or only one person
+        return res;                         // then the result must be NONE
     unordered_map<int, vector<string>> month_table;
     // fill the month_table
     for (const auto& _pair : input) {
@@ -47,6 +49,9 @@ auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
     for (const auto& _pair : month_table) {
         // generate vector to store whose birthdays have the same month
         vector<pair<string, birthday>> temp_container;
+        // The reason to use vector<pair<>> instead of map<> =>
+        // map<> has a double direction iterator,
+        // which is not supported by gcc_sort method.
         vector<string> _names = _pair.second;
         int _month            = _pair.first;
         for (const auto& _name : _names) {
@@ -66,7 +71,7 @@ auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
         for (int i = 0; i + 1 < temp_container.size(); i++) {
             if (temp_container[i].second.day == temp_container[i + 1].second.day) {
                 res[temp_container[i].second].push_back(temp_container[i].first);
-                res[temp_container[i + 1].second].push_back(temp_container[i + 1].first);
+                res[temp_container[i].second].push_back(temp_container[i + 1].first);
             }
         }
     }
