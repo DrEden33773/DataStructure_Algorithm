@@ -21,7 +21,7 @@ using namespace std;
  */
 class Match_The_Same_Birthday {
 public:
-    inline void interface();
+    static inline void interface();
 
 private:
     struct birthday { // visibility is public by default
@@ -31,7 +31,7 @@ private:
     using type_in  = unordered_map<string, birthday>;       // alias => input_type
     using type_res = map<birthday, vector<string>>;         // alias => result_type
     static inline auto solution(type_in input) -> type_res; // give the result
-    inline void print_output(type_res result);              // print the result
+    static inline void print_output(type_res result);       // print the result
 };
 
 auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
