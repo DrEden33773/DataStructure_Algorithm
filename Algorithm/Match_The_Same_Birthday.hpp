@@ -21,6 +21,10 @@
 #include <vector>
 using namespace std;
 
+/**
+ * @attention => only match the same day and same month, year is not considered
+ * @todo => find the same birthday
+ */
 using frame = class Match_The_Same_Birthday {
 public:
   inline void interface();
@@ -30,11 +34,12 @@ private:
     int month;
     int day;
   };
-  map<birthday, vector<string>> typeof_result;
-  unordered_map<string, birthday> typeof_input;
-  using type_in  = decltype(typeof_input);
-  using type_res = decltype(typeof_result);
-  inline auto solution(type_in input) -> type_res;
+  // map<birthday, vector<string>> typeof_result;
+  // unordered_map<string, birthday> typeof_input;
+  using type_in  = unordered_map<string, birthday>;  // alias => input_type
+  using type_res = map<birthday, vector<string>>;    // alias => result_type
+  inline auto solution(type_in input) -> type_res;   // give the result
+  inline void print_output(type_res result);         // print the result
 };
 
 auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
@@ -52,9 +57,10 @@ auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
     vector<pair<string, birthday>> temp_container;
     int _month            = _pair.first;
     vector<string> _names = _pair.second;
-    for (const string& name : _names) {
-      birthday _birthday = input[name];
-      temp_container.push_back(make_pair(name, _birthday));
+    for (const string& _name : _names) {
+      birthday _birthday = input[_name];
+      auto pair_to_push  = make_pair(_name, _birthday);
+      temp_container.push_back(pair_to_push);
     }
     // sort the container
     sort(temp_container.begin(), temp_container.end(),
@@ -62,7 +68,7 @@ auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
            return a.second.day < b.second.day;
          });
     // search the same birthday
-    for (int i = 0; i < temp_container.size(); i++) {
+    for (int i = 0; i + 1 < temp_container.size(); i++) {
       if (temp_container[i].second.day == temp_container[i + 1].second.day) {
         res[temp_container[i].second].push_back(temp_container[i].first);
         res[temp_container[i + 1].second].push_back(
