@@ -5,7 +5,9 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(
         DataStructure_Algorithm
+
         main.cpp
+
         Algorithm/Jump_N_Step.hpp
         Algorithm/Max_Sum_of_Sub_Array.hpp
         Algorithm/Match_The_Same_Birthday.hpp
