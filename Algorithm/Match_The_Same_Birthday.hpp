@@ -24,7 +24,7 @@ public:
     inline void interface();
 
 private:
-    struct birthday {
+    struct birthday { // visibility is public by default
         int month;
         int day;
     };
