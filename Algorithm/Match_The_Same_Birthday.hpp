@@ -28,10 +28,10 @@ private:
         int month;
         int day;
     };
-    using type_in  = unordered_map<string, birthday>; // alias => input_type
-    using type_res = map<birthday, vector<string>>;   // alias => result_type
-    inline auto solution(type_in input) -> type_res;  // give the result
-    inline void print_output(type_res result);        // print the result
+    using type_in  = unordered_map<string, birthday>;       // alias => input_type
+    using type_res = map<birthday, vector<string>>;         // alias => result_type
+    static inline auto solution(type_in input) -> type_res; // give the result
+    inline void print_output(type_res result);              // print the result
 };
 
 auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
