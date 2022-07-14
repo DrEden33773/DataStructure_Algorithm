@@ -18,3 +18,14 @@
 #include <unordered_map>
 #include <vector>
 using namespace std;
+
+class Match_The_Same_Birthday {
+public:
+  void interface();
+
+private:
+  struct birthday {
+    int month;
+    int day;
+  };
+};
