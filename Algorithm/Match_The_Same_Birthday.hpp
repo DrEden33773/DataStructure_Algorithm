@@ -71,8 +71,7 @@ auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
     for (int i = 0; i + 1 < temp_container.size(); i++) {
       if (temp_container[i].second.day == temp_container[i + 1].second.day) {
         res[temp_container[i].second].push_back(temp_container[i].first);
-        res[temp_container[i + 1].second].push_back(
-            temp_container[i + 1].first);
+        res[temp_container[i].second].push_back(temp_container[i + 1].first);
       }
     }
   }
