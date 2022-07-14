@@ -13,17 +13,11 @@
  *
  */
 
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <string>
-#include <unordered_map>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * @attention => only match the same day and same month, year is not considered
- * @todo => find the same birthday
  */
 class Match_The_Same_Birthday {
 public:
@@ -55,7 +49,7 @@ auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
         vector<pair<string, birthday>> temp_container;
         vector<string> _names = _pair.second;
         int _month            = _pair.first;
-        for (const string& _name : _names) {
+        for (const auto& _name : _names) {
             birthday _birthday = input[_name];
             auto pair_to_push  = make_pair(_name, _birthday);
             temp_container.push_back(pair_to_push);
