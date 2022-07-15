@@ -2,7 +2,7 @@
  * @file Match_The_Same_Birthday.hpp
  * @author Eden (edwardwang33773@gmail.com)
  * @brief {
-        0. pre_definations => class birthday { int month; int day; };
+        0. pre_definations => struct birthday { int month; int day; };
         1. found those who have the same birthday
         2. return all <date:birthday, vector<name:string>> pairs
     }
