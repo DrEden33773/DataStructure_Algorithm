@@ -23,8 +23,8 @@ private:
 /**
  * @brief return the Index (return -1 if not found)
  *
- * @param nums
- * @param target
+ * @param nums: const std::vector<int>&
+ * @param target: const int&
  * @return int
  */
 int BinarySearch::solution(const std::vector<int>& nums, const int& target) {
