@@ -14,8 +14,6 @@
 class SelectionSort {
 public:
     static inline void interface();
-
-private:
     static inline void accending(std::vector<int>& nums);
     static inline void decending(std::vector<int>& nums);
 };
@@ -57,3 +55,5 @@ void SelectionSort::decending(std::vector<int>& nums) {
         std::swap(nums[i], nums[maxIndex]);
     }
 }
+
+// T(n) = O(n^2)
