@@ -12,6 +12,13 @@
 #include <bits/stdc++.h>
 
 // vec => [1, 2, 4, 3, 9, 6, 7, 5, 10]
+// ans => [1, 2, 3, 4, 5, 6, 7, 9, 10]
+// 1 2 3 4 9 6 7 5 10
+// 1 2 3 4 6 9 7 5 10
+// 1 2 3 4 6 7 9 5 10
+// 1 2 3 4 6 7 5 9 10
+// 1 2 3 4 6 5 7 9 10
+// 1 2 3 4 5 6 7 9 10
 
 class InsertSort {
 private:
@@ -25,6 +32,7 @@ public:
 std::vector<int> InsertSort::test = { 1, 2, 4, 3, 9, 6, 7, 5, 10 };
 
 // Insert the nums[i] into the sorted range [0, i)
+// Seems to insert, actually, it's the upgrade of bubble sort
 void InsertSort::accending(std::vector<int>& nums) {
     int len = static_cast<int>(nums.size());
     for (int i = 1; i < len; ++i) {
@@ -37,6 +45,7 @@ void InsertSort::accending(std::vector<int>& nums) {
 }
 
 // Insert the nums[i] into the sorted range [0, i)
+// Seems to insert, actually, it's the upgrade of bubble sort
 void InsertSort::decending(std::vector<int>& nums) {
     int len = static_cast<int>(nums.size());
     for (int i = 1; i < len; ++i) {
@@ -64,3 +73,5 @@ void InsertSort::interface() {
     }
     std::cout << std::endl;
 }
+
+// T(n) = O(n^2)

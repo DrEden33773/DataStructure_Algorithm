@@ -78,4 +78,3 @@ void MergeSort::mergeSort(std::vector<int>& nums, int left, int right) {
 }
 
 // T(n) = O(nlogn)
-// T(n) = Theta(nlogn)
