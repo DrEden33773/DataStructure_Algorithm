@@ -18,6 +18,8 @@ public:
     static inline void decending(std::vector<int>& nums);
 };
 
+// Select the min in [i + 1, len) and swap with i
+//=> iterate i from 0 to len - 1
 void SelectionSort::accending(std::vector<int>& nums) {
     int len = static_cast<int>(nums.size());
     for (int i = 0; i < len; ++i) {
@@ -32,6 +34,8 @@ void SelectionSort::accending(std::vector<int>& nums) {
     }
 }
 
+// Select the max in [i + 1, len) and swap with i
+//=> iterate i from 0 to len - 1
 void SelectionSort::decending(std::vector<int>& nums) {
     int len = static_cast<int>(nums.size());
     for (int i = 0; i < len; ++i) {
