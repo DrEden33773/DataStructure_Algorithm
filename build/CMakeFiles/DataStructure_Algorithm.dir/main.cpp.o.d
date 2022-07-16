@@ -1,6 +1,6 @@
 CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: \
   /home/eden/CppProjects/DataStructure_Algorithm/main.cpp \
-  /home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Jump_N_Step.hpp \
+  /home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Problem/Jump_N_Step.hpp \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/iostream \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -162,4 +162,4 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/bits/stl_vector.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/bits/stl_bvector.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/bits/vector.tcc \
-  /home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Max_Sum_of_Sub_Array.hpp
+  /home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Problem/Max_Sum_of_Sub_Array.hpp

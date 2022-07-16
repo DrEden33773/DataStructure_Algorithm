@@ -7,7 +7,7 @@
 			"label": "lldb_debug_single",
 			"command": "clang++",
 			"args": [
-				"-std=gnu++20",
+				"-std=gnu++23",
 				"-fdiagnostics-color=always",
 				"-Wall",
 				"-g",
@@ -29,7 +29,7 @@
 			"label": "lldb_debug_multi",
 			"command": "clang++",
 			"args": [
-				"-std=gnu++20",
+				"-std=gnu++23",
 				"-fdiagnostics-color=always",
 				"-Wall",
 				"-g",
