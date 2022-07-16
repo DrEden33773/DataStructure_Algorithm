@@ -18,11 +18,6 @@ public:
     static inline void decending(std::vector<int>& nums);
 };
 
-/**
- * @brief selection_sort (accending order)
- *
- * @param nums
- */
 void SelectionSort::accending(std::vector<int>& nums) {
     int len = static_cast<int>(nums.size());
     for (int i = 0; i < len; ++i) {
@@ -37,11 +32,6 @@ void SelectionSort::accending(std::vector<int>& nums) {
     }
 }
 
-/**
- * @brief selection_sort (decending order)
- *
- * @param nums
- */
 void SelectionSort::decending(std::vector<int>& nums) {
     int len = static_cast<int>(nums.size());
     for (int i = 0; i < len; ++i) {
