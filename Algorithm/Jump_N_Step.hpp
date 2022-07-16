@@ -11,7 +11,6 @@
 
 #include <iostream>
 #include <vector>
-using namespace std;
 
 class N_Step {
 public:
@@ -23,19 +22,18 @@ private:
     inline static int best_solution(const int& input);
 };
 
-void N_Step::interface()
-{
-    cout << "Input number of steps(N) >> ";
+void N_Step::interface() {
+    std::cout << "Input number of steps(N) >> ";
     int input = 0;
-    cin >> input;
+    std::cin >> input;
     if (input <= 0) {
         throw std::invalid_argument("input should >= 1");
     }
     int res   = better_solution(input);
     int res_2 = best_solution(input);
-    cout << "The result (better_solution) is >> " << res << endl;
-    cout << "The result (best_solution) is >> " << res_2 << endl;
-    cout << endl;
+    std::cout << "The result (better_solution) is >> " << res << std::endl;
+    std::cout << "The result (best_solution) is >> " << res_2 << std::endl;
+    std::cout << std::endl;
 }
 
 /**
@@ -44,8 +42,7 @@ void N_Step::interface()
  * @param input
  * @return int
  */
-int N_Step::solution(const int& input)
-{
+int N_Step::solution(const int& input) {
     if (input < 0) {
         return 0;
     }
@@ -63,20 +60,19 @@ int N_Step::solution(const int& input)
  * @param input
  * @return int
  */
-int N_Step::better_solution(const int& input)
-{
+int N_Step::better_solution(const int& input) {
     if (input == 1 || input == 0) {
         return 1;
     }
     // try to iterate in one function this time!
-    vector<int> result_vec;
+    std::vector<int> result_vec;
     for (int i = 0; i <= input; ++i) {
         if (i <= 1) {
             result_vec.push_back(1);
         } else {
             result_vec.push_back(result_vec[i - 1] + result_vec[i - 2]);
             if (result_vec[i] < result_vec[i - 1]) {
-                cout << "Data overflowed while i = " << i << endl;
+                std::cout << "Data overflowed while i = " << i << std::endl;
                 throw std::overflow_error("Error_type: overflow_error");
             }
         }
@@ -91,8 +87,7 @@ int N_Step::better_solution(const int& input)
  * @param input
  * @return int
  */
-int N_Step::best_solution(const int& input)
-{
+int N_Step::best_solution(const int& input) {
     if (input == 1 || input == 0) {
         return 1;
     }
