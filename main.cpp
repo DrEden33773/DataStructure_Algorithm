@@ -1,5 +1,5 @@
-#include "Algorithm/Problem/Jump_N_Step.hpp"
-#include "Algorithm/Problem/Max_Sum_of_Sub_Array.hpp"
+// #include "Algorithm/Problem/Jump_N_Step.hpp"
+// #include "Algorithm/Problem/Max_Sum_of_Sub_Array.hpp"
 #include "Algorithm/Sort/insert_sort.hpp"
 
 int main() {
