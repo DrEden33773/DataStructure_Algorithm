@@ -10,6 +10,7 @@
  */
 
 #include <algorithm>
+#include <bits/ranges_algo.h>
 #include <vector>
 
 class BinarySearch {
@@ -17,20 +18,23 @@ public:
     static inline void interface();
 
 private:
-    static inline int solution(const std::vector<int>& nums, const int& target);
+    static inline int solution(std::vector<int>& nums, const int& target);
 };
 
 /**
  * @brief return the Index (return -1 if not found)
  *
- * @param nums: const std::vector<int>&
+ * @param nums: std::vector<int>&
  * @param target: const int&
  * @return int
  */
-int BinarySearch::solution(const std::vector<int>& nums, const int& target) {
+int BinarySearch::solution(std::vector<int>& nums, const int& target) {
     if (nums.empty()) {
         return -1; // do it immediately
     }
+    // sort nums
+    std::sort(nums.begin(), nums.end());
+    // binary search
     int resIndex = 0;
     int left     = 0;
     int right    = static_cast<int>(nums.size()) - 1;
