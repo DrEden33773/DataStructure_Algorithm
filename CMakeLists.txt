@@ -11,4 +11,6 @@ add_executable(
         Algorithm/Problem/Jump_N_Step.hpp
         Algorithm/Problem/Max_Sum_of_Sub_Array.hpp
         Algorithm/Problem/Match_The_Same_Birthday.hpp
+
+        Algorithm/Sort/insert_sort.hpp
 )
