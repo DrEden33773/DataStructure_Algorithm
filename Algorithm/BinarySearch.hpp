@@ -10,7 +10,6 @@
  */
 
 #include <algorithm>
-#include <bits/ranges_algo.h>
 #include <vector>
 
 class BinarySearch {
