@@ -46,11 +46,12 @@ public:
 
 /**
  * @brief radix_accending_sort
- * @attention input.size() < input[i] < (input.size())^2 , input[i]>=0
+ * @attention input.size() or 0 <= input[i] < (input.size())^2 , input[i]>=0
  * @param input
  */
 void RadixSort::solution(std::vector<int>& input) {
     static const int InputLen = static_cast<int>(input.size());
+    // initialize bondVec
     bondVec.reserve(InputLen);
     for (auto& num : input) {
         bond temp;
@@ -59,8 +60,10 @@ void RadixSort::solution(std::vector<int>& input) {
         temp.val    = num;
         bondVec.emplace_back(temp); // emplace => place != push
     }
+    // DAA_Sort
     DAA_Sort(b, InputLen);
     DAA_Sort(a, InputLen);
+    // input <==pull== bondVec
     int scannedNums = 0;
     for (auto& bond : bondVec) {
         if (scannedNums == InputLen) {
@@ -72,12 +75,13 @@ void RadixSort::solution(std::vector<int>& input) {
 }
 
 void RadixSort::DAA_Sort(KEY input, const int& ToSortLen) {
-    // initialize DAA => necessary
     DAA.reserve(ToSortLen);
+    // initialize DAA => necessary
     std::vector<bond> init_elem {};
     for (int i = 0; i < ToSortLen; i++) {
         DAA.emplace_back(init_elem);
     }
+    // bondVec ==push=> DAA
     for (auto& bond : bondVec) {
         int key;
         if (input == a) {
@@ -85,12 +89,10 @@ void RadixSort::DAA_Sort(KEY input, const int& ToSortLen) {
         } else {
             key = bond.tran.b;
         }
-        // DAA[key].push_back(bond);
-        auto& ToPush = DAA[key];
-        ToPush.push_back(bond);
+        DAA[key].push_back(bond);
     }
+    // bondVec <==pull== DAA
     int scannedNums = 0;
-    // BUGGED
     for (auto& bonds : DAA) {
         if (scannedNums == ToSortLen) {
             break;
@@ -103,6 +105,7 @@ void RadixSort::DAA_Sort(KEY input, const int& ToSortLen) {
             scannedNums += 1;
         }
     }
+    // clear DAA => necessary
     DAA.erase(DAA.begin(), DAA.end());
 }
 
