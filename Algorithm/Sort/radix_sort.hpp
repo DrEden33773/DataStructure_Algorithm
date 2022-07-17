@@ -72,7 +72,7 @@ void RadixSort::solution(std::vector<int>& input) {
 }
 
 void RadixSort::DAA_Sort(KEY input, const int& ToSortLen) {
-    // initialize DAA
+    // initialize DAA => necessary
     DAA.reserve(ToSortLen);
     std::vector<bond> init_elem {};
     for (int i = 0; i < ToSortLen; i++) {
