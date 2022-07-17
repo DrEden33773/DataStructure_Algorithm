@@ -1,7 +1,7 @@
 ﻿/**
- * @file radix_sort.hpp
+ * @file radix_sort_jr.hpp
  * @author Eden (edwardwang33773@gmail.com)
- * @brief radix_sort
+ * @brief radix_sort_jr
  * @version 0.1
  * @date 2022-07-17
  *
@@ -11,7 +11,7 @@
 
 #include <bits/stdc++.h>
 
-class RadixSort {
+class RadixSortJr {
 private:
     struct tuple {
         int a; // a = val / n
@@ -48,7 +48,7 @@ public:
  * @attention input.size() or 0 <= input[i] < (input.size())^2 , input[i]>=0
  * @param input
  */
-void RadixSort::solution(std::vector<int>& input) {
+void RadixSortJr::solution(std::vector<int>& input) {
     static const int InputLen = static_cast<int>(input.size());
     // initialize bondVec
     bondVec.reserve(InputLen);
@@ -73,7 +73,7 @@ void RadixSort::solution(std::vector<int>& input) {
     }
 }
 
-void RadixSort::DAA_Sort(KEY input, const int& ToSortLen) {
+void RadixSortJr::DAA_Sort(KEY input, const int& ToSortLen) {
     DAA.reserve(ToSortLen);
     // initialize DAA => necessary
     std::vector<bond> init_elem {};
@@ -108,7 +108,7 @@ void RadixSort::DAA_Sort(KEY input, const int& ToSortLen) {
     DAA.erase(DAA.begin(), DAA.end());
 }
 
-void RadixSort::println_Vec(std::vector<int>& input) {
+void RadixSortJr::println_Vec(std::vector<int>& input) {
     for (auto& num : input) {
         std::cout << num << " ";
     }
@@ -116,7 +116,7 @@ void RadixSort::println_Vec(std::vector<int>& input) {
     std::cout << std::endl;
 }
 
-void RadixSort::interface() {
+void RadixSortJr::interface() {
     std::vector<int> test { 1, 2, 4, 1, 6, 7, 5, 10, 9, 15, 30 };
     println_Vec(test);
     solution(test);
