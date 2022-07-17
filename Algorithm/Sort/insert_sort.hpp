@@ -37,6 +37,8 @@ void InsertSort::accending(std::vector<int>& nums) {
     int len = static_cast<int>(nums.size());
     for (int i = 1; i < len; ++i) {
         int j = i;
+        // [0, j) is sorted (accending)
+        // nums[j] >= nums[j - 1] => nums[j] is the max in [0, j] => right place
         while (j > 0 && nums[j] < nums[j - 1]) {
             std::swap(nums[j], nums[j - 1]);
             --j;
@@ -50,6 +52,8 @@ void InsertSort::decending(std::vector<int>& nums) {
     int len = static_cast<int>(nums.size());
     for (int i = 1; i < len; ++i) {
         int j = i;
+        // [0, j) is sorted (decending)
+        // nums[j] <= nums[j - 1] => nums[j] is the min in [0, j] => right place
         while (j > 0 && nums[j] > nums[j - 1]) {
             std::swap(nums[j], nums[j - 1]);
             --j;
