@@ -14,20 +14,12 @@
 class RadixSortJr {
 private:
     struct tuple {
-        int a; // a = val / n
-        int b; // b = val % n
-        tuple() {
-            a = -1;
-            b = -1;
-        };
+        int a = -1; // a = val / n
+        int b = -1; // b = val % n
     };
     struct bond {
         tuple tran;
-        int val;
-        bond()
-            : tran() {
-            val = -1;
-        };
+        int val = -1;
     };
     enum KEY {
         a,
@@ -36,11 +28,15 @@ private:
     std::vector<std::vector<bond>> DAA; // Direct Access Array
     std::vector<bond> bondVec;          // Array store bonds
 
+    // functions
+    void init_bondVec(std::vector<int>& input);
+    void DAA_Sort(KEY input, const int& ToSortLen);
+    void abstract_from_bondVec(std::vector<int>& input);
+    void println_Vec(std::vector<int>& input);
+
 public:
     void interface();
     void solution(std::vector<int>& input);
-    void DAA_Sort(KEY input, const int& ToSortLen);
-    void println_Vec(std::vector<int>& input);
 };
 
 /**
@@ -51,6 +47,17 @@ public:
 void RadixSortJr::solution(std::vector<int>& input) {
     static const int InputLen = static_cast<int>(input.size());
     // initialize bondVec
+    init_bondVec(input);
+    // DAA_Sort
+    DAA_Sort(b, InputLen);
+    DAA_Sort(a, InputLen);
+    // input <==pull== bondVec
+    abstract_from_bondVec(input);
+}
+
+void RadixSortJr::init_bondVec(std::vector<int>& input) {
+    const int InputLen = static_cast<int>(input.size());
+    // initialize bondVec
     bondVec.reserve(InputLen);
     for (auto& num : input) {
         bond temp;
@@ -58,18 +65,6 @@ void RadixSortJr::solution(std::vector<int>& input) {
         temp.tran.b = num % InputLen;
         temp.val    = num;
         bondVec.emplace_back(temp); // emplace => place != push
-    }
-    // DAA_Sort
-    DAA_Sort(b, InputLen);
-    DAA_Sort(a, InputLen);
-    // input <==pull== bondVec
-    int scannedNums = 0;
-    for (auto& bond : bondVec) {
-        if (scannedNums == InputLen) {
-            break;
-        }
-        input[scannedNums] = bond.val;
-        scannedNums += 1;
     }
 }
 
@@ -106,6 +101,18 @@ void RadixSortJr::DAA_Sort(KEY input, const int& ToSortLen) {
     }
     // clear DAA => necessary
     DAA.erase(DAA.begin(), DAA.end());
+}
+
+void RadixSortJr::abstract_from_bondVec(std::vector<int>& input) {
+    const int InputLen = static_cast<int>(input.size());
+    int scannedNums    = 0;
+    for (auto& bond : bondVec) {
+        if (scannedNums == InputLen) {
+            break;
+        }
+        input[scannedNums] = bond.val;
+        scannedNums += 1;
+    }
 }
 
 void RadixSortJr::println_Vec(std::vector<int>& input) {
