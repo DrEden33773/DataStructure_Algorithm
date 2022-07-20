@@ -26,6 +26,11 @@ void yanghui_tri::interface() {
     solution(input);
 }
 
+/**
+ * @brief No Recursion, only Iteration => Highest Speed!
+ *
+ * @param num
+ */
 void yanghui_tri::solution(const int& num) {
     if (num <= 0) {
         throw std::invalid_argument("input <= 0");
