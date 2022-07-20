@@ -26,6 +26,9 @@ private:
     struct birthday { // visibility is public by default
         int month;
         int day;
+        auto birthday_to_string() -> std::string {
+            return std::to_string(month) + "." + std::to_string(day);
+        }
     };
     using type_in  = std::unordered_map<std::string, birthday>;    // alias => input_type
     using type_res = std::map<birthday, std::vector<std::string>>; // alias => result_type
