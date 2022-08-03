@@ -1,7 +1,7 @@
 ﻿/**
  * @file yanghui_tri.hpp
  * @author Eden (edwardwang33773@gmail.com)
- * @brief Give number N, then print YnagHui Triangle
+ * @brief Give number N, then print YangHui Triangle
  * @version 0.1
  * @date 2022-07-21
  *
