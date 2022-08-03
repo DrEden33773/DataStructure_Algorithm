@@ -24,7 +24,12 @@ public:
 };
 
 // T(n) = Theta(n)
-void MergeSort::merge(std::vector<int>& nums, int left, int mid, int right) {
+void MergeSort::merge(
+    std::vector<int>& nums,
+    int left,
+    int mid,
+    int right
+) {
     int len = right - left + 1;
     std::vector<int> tmp(len);
     int i = left;    // i <=> POS of Left_Part_Array
@@ -67,7 +72,7 @@ void MergeSort::merge(std::vector<int>& nums, int left, int mid, int right) {
 // T(n) = 2T(n/2) + Theta(n) => Theta(nlogn)
 void MergeSort::mergeSort(std::vector<int>& nums, int left, int right) {
     if (left < right) {
-        // left == right => only 1 element in the sub vector
+        // left == right ==imply=> only 1 element in the sub vector
         // that vector must be ordered, do not need to sort anymore
         int mid = (left + right) / 2;
         mergeSort(nums, left, mid);
