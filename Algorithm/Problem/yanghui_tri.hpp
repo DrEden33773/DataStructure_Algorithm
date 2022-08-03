@@ -19,6 +19,9 @@ public:
 };
 
 void yanghui_tri::interface() {
+    std::cout << "YangHui Triangle" << std::endl;
+    std::cout << "Author >> Eden" << std::endl;
+    std::cout << std::endl;
     std::cout << "Please input number (should > 0) => " << std::endl;
     int input;
     std::cin >> input;
