@@ -39,8 +39,8 @@ void yanghui_tri::solution(const int& num) {
         throw std::invalid_argument("input <= 0");
     }
     int curr_line = 1;
-    std::vector<size_t> current {};
-    std::vector<size_t> reference {};
+    std::vector<size_t> current;
+    std::vector<size_t> reference;
     while (curr_line <= num) {
         // build from reference
         current.reserve(curr_line);
