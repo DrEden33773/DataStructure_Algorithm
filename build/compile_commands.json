@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/eden/CppProjects/DataStructure_Algorithm/build",
-  "command": "/usr/sbin/clang++   -g -std=gnu++2b -o CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o -c /home/eden/CppProjects/DataStructure_Algorithm/main.cpp",
+  "command": "/usr/sbin/clang++   -g -std=gnu++20 -o CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o -c /home/eden/CppProjects/DataStructure_Algorithm/main.cpp",
   "file": "/home/eden/CppProjects/DataStructure_Algorithm/main.cpp"
 }
 ]

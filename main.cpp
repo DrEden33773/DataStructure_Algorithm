@@ -3,6 +3,7 @@
 // #include "Algorithm/Sort/insert_sort.hpp"
 #include "Algorithm/Problem/yanghui_tri.hpp"
 #include "Algorithm/Sort/radix_sort_jr.hpp"
+#include <bits/stdc++.h>
 
 int main() {
     // N_Step::interface();
