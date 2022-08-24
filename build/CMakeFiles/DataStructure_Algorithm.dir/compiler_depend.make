@@ -329,8 +329,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: /home/eden/CppProjects/DataSt
   /usr/include/c++/12.1.1/bits/unordered_map.h \
   /usr/include/c++/12.1.1/bits/erase_if.h \
   /usr/include/c++/12.1.1/array \
-  /usr/include/c++/12.1.1/bits/move_only_function.h \
-  /usr/include/c++/12.1.1/bits/mofunc_impl.h \
   /usr/include/c++/12.1.1/iomanip \
   /usr/include/c++/12.1.1/locale \
   /usr/include/c++/12.1.1/bits/locale_facets_nonio.h \
@@ -457,18 +455,8 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: /home/eden/CppProjects/DataSt
   /usr/include/c++/12.1.1/span \
   /usr/include/c++/12.1.1/source_location \
   /usr/include/c++/12.1.1/syncstream \
-  /usr/include/c++/12.1.1/version \
-  /usr/include/c++/12.1.1/expected \
-  /usr/include/c++/12.1.1/spanstream \
-  /usr/include/c++/12.1.1/stacktrace \
-  /usr/include/c++/12.1.1/stdatomic.h
+  /usr/include/c++/12.1.1/version
 
-
-/usr/include/c++/12.1.1/stdatomic.h:
-
-/usr/include/c++/12.1.1/stacktrace:
-
-/usr/include/c++/12.1.1/spanstream:
 
 /usr/include/c++/12.1.1/source_location:
 
@@ -819,8 +807,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: /home/eden/CppProjects/DataSt
 /usr/include/bits/types/siginfo_t.h:
 
 /usr/include/c++/12.1.1/bits/stl_list.h:
-
-/usr/include/c++/12.1.1/bits/move_only_function.h:
 
 /usr/include/bits/types/clockid_t.h:
 
@@ -1180,8 +1166,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: /home/eden/CppProjects/DataSt
 
 /usr/include/c++/12.1.1/cerrno:
 
-/usr/include/c++/12.1.1/bits/mofunc_impl.h:
-
 /usr/include/bits/getopt_posix.h:
 
 /usr/include/errno.h:
@@ -1221,8 +1205,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: /home/eden/CppProjects/DataSt
 /usr/include/c++/12.1.1/bits/stl_construct.h:
 
 /usr/include/c++/12.1.1/bits/locale_classes.tcc:
-
-/usr/include/c++/12.1.1/expected:
 
 /usr/include/c++/12.1.1/bits/stl_multimap.h:
 
