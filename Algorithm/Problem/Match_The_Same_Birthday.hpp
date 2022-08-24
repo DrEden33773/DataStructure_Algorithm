@@ -66,7 +66,10 @@ auto Match_The_Same_Birthday::solution(type_in input) -> type_res {
         std::sort(
             temp_container.begin(),
             temp_container.end(),
-            [](const std::pair<std::string, birthday>& one, const std::pair<std::string, birthday>& another) {
+            [](
+                const std::pair<std::string, birthday>& one,
+                const std::pair<std::string, birthday>& another
+            ) {
                 return one.second.day < another.second.day;
             }
         );
