@@ -86,7 +86,7 @@ public:
 
     static void example() {
         auto TestSolution   = new Sum_of_Three_Num();
-        vector<int> TestVec = { -1, -1, 4, 0, 1, 2 }; // after sort => {-1 -1 0 1 2 4}
+        vector<int> TestVec = { -1, -1, 4, 0, 1, 2 }; // after sort => { -1, -1, 0, 1, 2, 4 }
         auto Result         = TestSolution->threeSum(TestVec);
         // Print the outcome
         cout << endl;
