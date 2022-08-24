@@ -51,6 +51,7 @@ public:
                         inner.push_back(nums[first]);
                         inner.push_back(nums[second]);
                         inner.push_back(*the_third_element);
+                        // push into inner => best: in order (first -> second -> third)
                         res.push_back(inner);
                     }
                 }
