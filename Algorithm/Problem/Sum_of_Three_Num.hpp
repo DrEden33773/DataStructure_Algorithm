@@ -24,6 +24,7 @@ public:
         // iterate
         int last = nums.size() - 1;
         map<pair<int, int>, bool> notation_of_tuple; // pair<int, int> <=> pair<first_num, second_num>
+        map<int, bool> notation_of_first_num;
         for (int first = 0; first < nums.size() - 2; ++first) {
             if (nums[first] > 0) {
                 // nums[first] is too big
@@ -34,6 +35,12 @@ public:
                 // nums[first] is too small
                 continue;
             } else {
+                if (notation_of_first_num[nums[first]] == false) {
+                    notation_of_first_num[nums[first]] = true;
+                } else {
+                    // nums[first] is duplicate
+                    continue;
+                }
                 for (int second = first + 1; second < nums.size() - 1; ++second) {
                     vector<int> inner;
                     int sum_of_two = nums[first] + nums[second];
@@ -55,7 +62,10 @@ public:
                     };
                     // give a iterator which points to nums[second + 1]
                     auto second_plus_one_iterator = nums.begin();
-                    ranges::advance(second_plus_one_iterator, second + 1);
+                    // ranges::advance(second_plus_one_iterator, second + 1);
+                    for (int i = 0; i < second + 1; ++i) {
+                        ++second_plus_one_iterator;
+                    }
                     // find
                     auto the_third_element = find_if(
                         second_plus_one_iterator,
@@ -115,8 +125,9 @@ public:
 
     static void example() {
         unique_ptr<Sum_of_Three_Num> TestSolution = make_unique<Sum_of_Three_Num>();
+        // [-1,0,1,2,-1,-4]
         vector<int> TestVec
-            = { -1, -1, 0, 1, 2, 4 }; // after sort => { -1, -1, 0, 1, 2, 4 }
+            = { -1, 0, 1, 2, -1, -4 }; // after sort => { -4, -1, -1, 0, 1, 2 }
         auto Result
             = TestSolution->threeSum(TestVec);
         // Print the outcome
