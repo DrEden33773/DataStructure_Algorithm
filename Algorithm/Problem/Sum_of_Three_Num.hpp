@@ -7,29 +7,45 @@ public:
 
         // construct
         vector<vector<int>> res;
+
+        // special cases
         if (nums.empty()) {
+            // empty
+            return res;
+        }
+        if (*(nums.begin()) > 0 || *(nums.end()) < 0) {
+            // too big/small
             return res;
         }
 
         // sort
-        sort(nums.begin(), nums.end());
+        sort(nums.begin(), nums.end()); // acending order
 
         // iterate
         int last = nums.size() - 1;
+        map<pair<int, int>, bool> notation_of_tuple; // pair<int, int> <=> pair<first_num, second_num>
         for (int first = 0; first < nums.size() - 2; ++first) {
+            if (nums[first] > 0) {
+                // nums[first] is too big
+                break;
+            }
             // smallest + biggest + second_biggest < 0
             if (nums[first] + nums[last] + nums[last - 1] < 0) {
-                // abort
-                continue; // nums[first] won't join the tuple in res
+                // nums[first] is too small
+                continue;
             } else {
-                // vector<int> inner;
-                // now could iterate
                 for (int second = first + 1; second < nums.size() - 1; ++second) {
                     vector<int> inner;
                     int sum_of_two = nums[first] + nums[second];
                     if (sum_of_two + nums[last] < 0) {
-                        // abort
+                        // sum_of_two is too small => the second is too small
+                        // try to find a bigger `second`
                         continue;
+                    }
+                    if (sum_of_two > 0) { // >= is wrong, such as { 0, 0, 0 }
+                        // sum_of_two is too big
+                        // could not refind a smaller `second` => abort `first` and `second`
+                        break;
                     }
                     // start to find!
                     int first_in_nums       = nums[first];
@@ -47,48 +63,62 @@ public:
                         find_third_element
                     );
                     if (the_third_element != nums.end()) {
-                        // successfully find!
-                        inner.push_back(nums[first]);
-                        inner.push_back(nums[second]);
-                        inner.push_back(*the_third_element);
-                        // push into inner => best: in order (first -> second -> third)
-                        res.push_back(inner);
+                        // successfully find
+                        // but need to make sure tuple<first_num, second_num> is unique
+
+                        // make pair
+                        auto curr_tuple_of_first_second = make_pair(first_in_nums, second_in_nums);
+                        // check if the pair is already in the notation_of_tuple
+                        if (notation_of_tuple[curr_tuple_of_first_second] == false) {
+                            // not in the notation_of_tuple
+                            notation_of_tuple[curr_tuple_of_first_second] = true;
+                            // add to res
+                            inner.push_back(first_in_nums);
+                            inner.push_back(second_in_nums);
+                            inner.push_back(*the_third_element);
+                            res.push_back(inner);
+                        } else {
+                            // in the notation_of_tuple
+                            continue;
+                        }
                     }
                 }
             }
         }
 
-        // have to unique the res
+        // have to unique the res => now this is unnecessary
         // EG: {{-1,-1,2},{-1,0,1},{-1,0,1}} => {{-1,-1,2},{-1,0,1}}
 
-        auto Judge_Tuple_Equality =
-            [&](vector<int>& InputA, vector<int>& InputB)
-            -> bool {
-            // {-1 -1 2} and {-1 2 -1}
-            if (InputA.size() != InputB.size()) {
-                return false;
-            }
-            sort(InputA.begin(), InputA.end());
-            sort(InputB.begin(), InputB.end());
-            bool res = true;
-            for (int i = 0; i < InputA.size(); ++i) {
-                if (InputA[i] != InputB[i]) {
-                    res = false;
-                    break;
-                }
-            }
-            return res;
-        };
-        auto LAST = unique(res.begin(), res.end(), Judge_Tuple_Equality);
-        res.erase(LAST, res.end());
+        // auto Judge_Tuple_Equality =
+        //     [&](vector<int>& InputA, vector<int>& InputB)
+        //     -> bool {
+        //     // {-1 -1 2} and {-1 2 -1}
+        //     if (InputA.size() != InputB.size()) {
+        //         return false;
+        //     }
+        //     sort(InputA.begin(), InputA.end());
+        //     sort(InputB.begin(), InputB.end());
+        //     bool res = true;
+        //     for (int i = 0; i < InputA.size(); ++i) {
+        //         if (InputA[i] != InputB[i]) {
+        //             res = false;
+        //             break;
+        //         }
+        //     }
+        //     return res;
+        // };
+        // auto LAST = unique(res.begin(), res.end(), Judge_Tuple_Equality);
+        // res.erase(LAST, res.end());
 
         return res;
     }
 
     static void example() {
-        auto TestSolution   = new Sum_of_Three_Num();
-        vector<int> TestVec = { -1, -1, 4, 0, 1, 2 }; // after sort => { -1, -1, 0, 1, 2, 4 }
-        auto Result         = TestSolution->threeSum(TestVec);
+        unique_ptr<Sum_of_Three_Num> TestSolution = make_unique<Sum_of_Three_Num>();
+        vector<int> TestVec
+            = { -1, -1, 0, 1, 2, 4 }; // after sort => { -1, -1, 0, 1, 2, 4 }
+        auto Result
+            = TestSolution->threeSum(TestVec);
         // Print the outcome
         cout << endl;
         cout << "{";
