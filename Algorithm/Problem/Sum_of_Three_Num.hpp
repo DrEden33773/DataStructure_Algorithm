@@ -22,7 +22,7 @@ public:
         sort(nums.begin(), nums.end()); // acending order
 
         // iterate
-        int last = nums.size() - 1;
+        size_t last = nums.size() - 1;
         map<pair<int, int>, bool> notation_of_tuple; // pair<int, int> <=> pair<first_num, second_num>
         map<int, bool> notation_of_first_num;
         for (int first = 0; first < nums.size() - 2; ++first) {
