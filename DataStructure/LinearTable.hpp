@@ -119,7 +119,7 @@ void LinearTable<T>::push_back(const T& value) {
         // if you preAlloc(capacity + 1), then you have to preAlloc that again
         // each time you push_back
         //
-        // but things will be aparently different if you preAlloc(const * capacity)
+        // but things will be apparently different if you preAlloc(const * capacity)
         //
         // if the const = 2, then it means you only need to preAlloc that
         // after push_back n times
