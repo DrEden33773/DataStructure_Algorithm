@@ -6,13 +6,13 @@ class LinkedList_single_direction {
 private:
     struct node {
         T element;
-        node& next = nullptr;
-        node& prev = nullptr;
+        node* next = nullptr;
+        node* prev = nullptr;
         node(T& element)
             : element(element) { }
     };
-    node& head      = nullptr; // head could be unnull
-    node& tail      = nullptr;
+    node* head      = nullptr; // head could be unnull
+    node* tail      = nullptr;
     size_t node_num = 0;
 
 public:
@@ -34,9 +34,9 @@ public:
             head = curr;
             tail = curr;
         } else {
-            tail.next = curr;
-            curr.prev = tail;
-            tail      = curr;
+            tail->next = curr;
+            curr.prev  = tail;
+            tail       = curr;
         }
         ++node_num;
     }
@@ -45,17 +45,17 @@ public:
         if (node_num == 0) {
             throw std::out_of_range("No Elements");
         }
-        T Res = tail.element;
+        T Res = tail->element;
 
         if (node_num == 1) {
             delete head;
             head = nullptr;
             tail = nullptr;
         } else {
-            node& fianl_tail = tail.prev;
+            node& final_tail = tail->prev;
             delete tail;
-            tail      = fianl_tail;
-            tail.next = nullptr;
+            tail       = final_tail;
+            tail->next = nullptr;
         }
         --node_num;
 

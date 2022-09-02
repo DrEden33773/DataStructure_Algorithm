@@ -19,7 +19,7 @@ public:
         }
 
         // sort
-        sort(nums.begin(), nums.end()); // acending order
+        sort(nums.begin(), nums.end()); // ascending order
 
         // iterate
         size_t last = nums.size() - 1;

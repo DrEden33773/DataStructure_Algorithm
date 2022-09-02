@@ -6,13 +6,13 @@ class CircuitLinkedList_TwoDirection {
 private:
     struct node {
         T data;
-        node& next = nullptr;
-        node& prev = nullptr;
+        node* next = nullptr;
+        node* prev = nullptr;
         node(const T& data)
             : data(data) { }
     };
-    node& head         = nullptr;
-    node& tail         = nullptr;
+    node* head         = nullptr;
+    node* tail         = nullptr;
     size_t num_of_node = 0;
 
 public:
@@ -35,14 +35,14 @@ public:
             head = tmp;
             tail = tmp;
 
-            tail.next = head;
-            head.prev = tail;
+            tail->next = head;
+            head->prev = tail;
         } else {
-            tail.next = tmp;
-            tmp.prev  = tail;
+            tail->next = tmp;
+            tmp.prev   = tail;
 
-            tmp.next  = head;
-            head.prev = tmp;
+            tmp.next   = head;
+            head->prev = tmp;
 
             tail = tmp;
         }
@@ -51,12 +51,12 @@ public:
     }
 
     T pop() {
-        assert(!num_of_node);
+        assert(num_of_node != 0);
 
-        node& locator = tail.prev;
+        node& locator = tail->prev;
 
         locator.next = head;
-        head.prev    = locator;
+        head->prev   = locator;
 
         delete tail;
 
