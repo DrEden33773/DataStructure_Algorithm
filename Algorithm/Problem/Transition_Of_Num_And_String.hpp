@@ -2,7 +2,7 @@
  * @file Transition_Of_Num_And_String.hpp
  * @author Eden (edwardwang33773@gmail.com)
  * @brief
- *      Give you a DEX number, and try to transit it into a string,
+ *      Give you a DEX number, and try to translate it into a string,
  *      the rule of which could be implied by the examples bellow:
  *      1 => A, 2 => B, 26 => Z, 27 => AA, 28 => AB, 52 => AZ, 53 => BA
  *      You also need to imply a method(function) to make "string => DEX number" possible
@@ -27,10 +27,24 @@ public:
     static void example() {
         cout << endl;
         Transition_Of_Num_And_String testExample;
-        int testInt    = 2;
-        string testStr = "B";
+        int testInt    = 17576;
+        string testStr = "YYZ";
         cout << testInt << " to " << testExample.itos(testInt) << endl;
         cout << testStr << " to " << testExample.stoi(testStr) << endl;
+        cout << endl;
+        cout << "now generate a random number between 1 and 999999" << endl;
+        // generate a random number between 1 and 999999
+        srand(time(nullptr));
+        int randomNum = rand() % 999999 + 1;
+        cout << "generated num => " << randomNum << endl;
+        // judge
+        string randomNum_itos   = testExample.itos(randomNum);
+        int randomNum_itos_stoi = testExample.stoi(randomNum_itos);
+        cout << randomNum << " to " << randomNum_itos << endl;
+        cout << randomNum_itos << " to " << randomNum_itos_stoi << endl;
+        assert(randomNum == randomNum_itos_stoi);
+        cout << endl;
+        cout << "successfully proved to be correct!" << endl;
         cout << endl;
     }
     string itos(int& num) {
@@ -54,7 +68,7 @@ public:
                 BitTable.push_back(currRemainder);
                 input /= 26;
             } else {
-                BitTable.push_back(currRemainder + 1); // 反向借位
+                BitTable.push_back(currRemainder + 26); // 反向借位，26是“进制”值
                 input /= 26;
                 input -= 1; // 反向借位
             }
