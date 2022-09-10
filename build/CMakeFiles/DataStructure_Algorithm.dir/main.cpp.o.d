@@ -395,5 +395,6 @@ CMakeFiles/DataStructure_Algorithm.dir/main.cpp.o: \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/syncstream \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/version \
   /home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Problem/Sum_of_Three_Num.hpp \
+  /home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Problem/Transition_Of_Num_And_String.hpp \
   /home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Problem/yanghui_tri.hpp \
   /home/eden/CppProjects/DataStructure_Algorithm/Algorithm/Sort/radix_sort_jr.hpp

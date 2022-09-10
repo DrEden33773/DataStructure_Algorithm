@@ -13,6 +13,7 @@ add_executable(
         Algorithm/Problem/yanghui_tri.hpp
         Algorithm/Problem/Sum_of_Three_Num.hpp
         Algorithm/Problem/LongestValidColumnStr.hpp
+        Algorithm/Problem/Transition_Of_Num_And_String.hpp
 
         # Algorithm/Sort/insert_sort.hpp
         Algorithm/Sort/radix_sort_jr.hpp
