@@ -68,7 +68,7 @@ public:
                 BitTable.push_back(currRemainder);
                 input /= 26;
             } else {
-                BitTable.push_back(currRemainder + 26); // 反向借位，26是“进制”值
+                BitTable.push_back(26); // 反向借位，26是“进制”值
                 input /= 26;
                 input -= 1; // 反向借位
             }

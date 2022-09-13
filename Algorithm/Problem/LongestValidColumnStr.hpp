@@ -68,7 +68,7 @@ public:
         string Input = "()(()";
         int Res      = Test.longestValidParentheses(Input);
         cout << endl;
-        cout << Res << endl;
+        cout << Input << " => " << Res << endl;
         cout << endl;
     }
 };
